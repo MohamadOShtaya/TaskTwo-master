@@ -24,6 +24,7 @@ public class tab1Controllers  {
     ObservableList<String> ListObserv = FXCollections.observableArrayList();
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
+
     CourseRepo courseRepo = new CourseRepo(entityManager);
     courseService courseService = new courseService(courseRepo);
     @FXML  Button Get;

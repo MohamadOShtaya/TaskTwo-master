@@ -3,10 +3,14 @@ package com.quizplus.tasktwo.Service;
 import com.quizplus.tasktwo.Models.Course;
 import com.quizplus.tasktwo.Rerpositry.CourseRepo;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.List;
 
 public class courseService {
-    private CourseRepo courseRepo;
+
+     CourseRepo courseRepo;
     public courseService(CourseRepo courseRepo) {
         this.courseRepo = courseRepo;
     }

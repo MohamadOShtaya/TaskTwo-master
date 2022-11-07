@@ -1,14 +1,18 @@
 package com.quizplus.tasktwo.Rerpositry;
 
 import com.quizplus.tasktwo.Models.Course;
+import com.quizplus.tasktwo.Service.courseService;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
 
 public class CourseRepo {
+    courseService courseService;
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
-    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    public EntityManager entityManager = entityManagerFactory.createEntityManager();
+
     public CourseRepo(EntityManager theEntityManager){
         entityManager=theEntityManager;
     }
@@ -17,10 +21,10 @@ public class CourseRepo {
         return entityManager.createQuery("from course ").getResultList();
     }
     public void save(Course theCourse) {
-         entityManager.getTransaction().begin();
-         entityManager.persist(theCourse);
+        entityManager.getTransaction().begin();
+        entityManager.persist(theCourse);
 
-         entityManager.getTransaction().commit();
+        entityManager.getTransaction().commit();
     }
 
     public Course findById(int theId) {
@@ -30,11 +34,11 @@ public class CourseRepo {
     }
     public void Put(Course course){
 
-        entityManager.createQuery("Update course set courseName='\" + course.getCourseName() + \"',and set teacherName='\" +   course.getTeacherName() + \"',and set courseCapacity='\" + course.getCourseCapacity() + \"',and set date_='\" + course.getDate() + \"' ,and set isAvilable='\" + course.isAvilable() + \"' where courseId ='\" +  course.getCourseId() + \"'\";")
+       entityManager.createQuery("Update course set courseName='\" + course.getCourseName() + \"',and set teacherName='\" +   course.getTeacherName() + \"',and set courseCapacity='\" + course.getCourseCapacity() + \"',and set date_='\" + course.getDate() + \"' ,and set isAvilable='\" + course.isAvilable() + \"' where courseId ='\" +  course.getCourseId() + \"'\";")
                 .executeUpdate();
     }
     public void deleteById(int courseId){
-        entityManager.getTransaction().begin();
+       entityManager.getTransaction().begin();
         try {
             Course course = entityManager.find(Course.class,courseId);
             entityManager.remove(course);
