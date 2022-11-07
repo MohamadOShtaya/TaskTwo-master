@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -47,32 +48,42 @@ public class tab2Controllers {
 
     @FXML
     void Deleate(ActionEvent event) {
-        if(ListView.getSelectionModel().getSelectedIndex()>=0){
-            int index = ListView.getSelectionModel().getSelectedIndex();
-            int studentId = students.get(index).getStudentId();
-            try{
-                System.out.println(studentId);
-                studentService.deleateById(studentId);
-                ListView.getItems().remove(index);
+        try {
+            if(ListView.getSelectionModel().getSelectedIndex()>=0){
+                int index = ListView.getSelectionModel().getSelectedIndex();
+                int studentId = students.get(index).getStudentId();
+                try{
+                    System.out.println(studentId);
+                    studentService.deleateById(studentId);
+                    ListView.getItems().remove(index);
+
+                }
+                catch (Exception ex){
+                    System.out.println("this id has been alredy deleted");
+
+                }
 
             }
-            catch (Exception ex){
-                System.out.println("this id has been alredy deleted");
-
+            else {
+                String str = txt.getText();
+                int num = Integer.parseInt(str);
+                try{
+                    System.out.println(num);
+                    studentService.deleateById(num);
+                }
+                catch (Exception ex){
+                    System.out.println("this id has been alredy deleted");
+                }
             }
 
         }
-        else {
-            String str = txt.getText();
-            int num = Integer.parseInt(str);
-            try{
-                System.out.println(num);
-                studentService.deleateById(num);
-            }
-            catch (Exception ex){
-                System.out.println("this id has been alredy deleted");
-            }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("please select student or enter student ID");
+            alert.show();
         }
+
 
     }
 
@@ -90,14 +101,23 @@ public class tab2Controllers {
 
     @FXML
     public int Update(ActionEvent event) throws IOException {
-        int index = ListView.getSelectionModel().getSelectedIndex();
-        id = students.get(index).getStudentId();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("UpdateStudent.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-        stage.setTitle("Update Student !");
-        stage.setScene(scene);
-        stage.show();
+        try {
+            int index = ListView.getSelectionModel().getSelectedIndex();
+            id = students.get(index).getStudentId();
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("UpdateStudent.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+            stage.setTitle("Update Student !");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("please select student");
+            alert.show();
+        }
+
         return id;
     }
 

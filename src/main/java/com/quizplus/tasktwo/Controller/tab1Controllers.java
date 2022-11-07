@@ -44,33 +44,43 @@ public class tab1Controllers  {
     }
 
     public void deleteCourses(ActionEvent actionEvent){
-        if(list.getSelectionModel().getSelectedIndex()>=0){
-            int index = list.getSelectionModel().getSelectedIndex();
-            int courseId = courses.get(index).getCourseId();
+        try {
+            if(list.getSelectionModel().getSelectedIndex()>=0){
+                int index = list.getSelectionModel().getSelectedIndex();
+                int courseId = courses.get(index).getCourseId();
 
-            try{
-                System.out.println(courseId);
-                courseService.deleateById(courseId);
-                list.getItems().remove(index);
+                try{
+                    System.out.println(courseId);
+                    courseService.deleateById(courseId);
+                    list.getItems().remove(index);
+
+                }
+                catch (Exception ex){
+                    System.out.println("this id has been alredy deleted");
+
+                }
 
             }
-            catch (Exception ex){
-                System.out.println("this id has been alredy deleted");
-
+            else {
+                String str = txt.getText();
+                int num = Integer.parseInt(str);
+                try{
+                    System.out.println(num);
+                    courseService.deleateById(num);
+                }
+                catch (Exception ex){
+                    System.out.println("this id has been alredy deleted");
+                }
             }
 
         }
-        else {
-            String str = txt.getText();
-            int num = Integer.parseInt(str);
-            try{
-                System.out.println(num);
-                courseService.deleateById(num);
-            }
-            catch (Exception ex){
-                System.out.println("this id has been alredy deleted");
-            }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("Please select course or enter course Id");
+            alert.show();
         }
+
 
     }
 
@@ -79,24 +89,43 @@ public class tab1Controllers  {
     }
 
     public void Add(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AddCourse.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-        stage.setTitle("Add Course !");
-        stage.setScene(scene);
-        stage.show();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AddCourse.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+            stage.setTitle("Add Course !");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("EROR");
+            alert.show();
+        }
+
 
     }
 
     public int Update() throws IOException {
-        int index = list.getSelectionModel().getSelectedIndex();
-        id = courses.get(index).getCourseId();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("UpdateCourse.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-        stage.setTitle("Update Course !");
-        stage.setScene(scene);
-        stage.show();
+
+        try {
+            int index = list.getSelectionModel().getSelectedIndex();
+            id = courses.get(index).getCourseId();
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("UpdateCourse.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+            stage.setTitle("Update Course !");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("please select courses");
+            alert.show();
+        }
+
         return id;
     }
 
@@ -110,7 +139,10 @@ public class tab1Controllers  {
             tetxArea.appendText(strr);
         }
         catch (Exception ex){
-
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("please select courses");
+            alert.show();
         }
 
     }
