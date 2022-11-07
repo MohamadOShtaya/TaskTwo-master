@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="580.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizplus.tasktwo.Controller.AddStudent">
+   <children>
+      <Label layoutX="119.0" layoutY="111.0" prefHeight="17.0" prefWidth="74.0" text="Name" />
+      <Label layoutX="119.0" layoutY="181.0" text="Gender" />
+      <Label layoutX="119.0" layoutY="243.0" text="Avg" />
+      <Label layoutX="119.0" layoutY="307.0" text="Department" />
+      <TextField fx:id="txtName" layoutX="226.0" layoutY="107.0" />
+      <TextField fx:id="txtGender" layoutX="226.0" layoutY="169.0" />
+      <TextField fx:id="txtAvg" layoutX="226.0" layoutY="239.0" />
+      <TextField fx:id="txtDepartment" layoutX="226.0" layoutY="303.0" />
+      <Button layoutX="238.0" layoutY="402.0" mnemonicParsing="false" onAction="#SaveStudent" prefHeight="25.0" prefWidth="138.0" text="OK" />
+   </children>
+</AnchorPane>
