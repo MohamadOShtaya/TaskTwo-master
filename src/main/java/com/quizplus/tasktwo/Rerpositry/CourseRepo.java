@@ -20,7 +20,10 @@ public class CourseRepo {
         return entityManager.createQuery("from course ").getResultList();
     }
     public void save(Course theCourse) {
-        entityManager.getTransaction().begin();
+        if(!entityManager.getTransaction().isActive())
+        {
+            entityManager.getTransaction().begin();
+        }
         entityManager.persist(theCourse);
         entityManager.getTransaction().commit();
     }
@@ -36,7 +39,11 @@ public class CourseRepo {
                 .executeUpdate();
     }
     public void deleteById(int courseId){
-       entityManager.getTransaction().begin();
+        if(!entityManager.getTransaction().isActive())
+        {
+            entityManager.getTransaction().begin();
+        }
+
         try {
             Course course = entityManager.find(Course.class,courseId);
             entityManager.remove(course);

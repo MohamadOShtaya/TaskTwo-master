@@ -126,15 +126,14 @@ public class tabCoursesControllers {
     }
 
     public void ShowCourses(ActionEvent actionEvent) {
-//        try {
+        //try {
             int index = list.getSelectionModel().getSelectedIndex();
             int courseId = courses.get(index).getCourseId();
             String strr=null;
              strr = courseService.findById(courseId).toString();
             System.out.println(strr);
             tetxArea.appendText(strr);
-
-//        }
+       // }
 //        catch (Exception ex){
 //            Alert alert = new Alert(Alert.AlertType.ERROR);
 //            alert.setContentText("Alert Message");

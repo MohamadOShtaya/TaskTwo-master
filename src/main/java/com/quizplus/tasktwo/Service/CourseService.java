@@ -19,7 +19,7 @@ public class CourseService {
         return courseRepo.finaAll();
     }
     public Course findById(int theId) {
-        entityManager.getTransaction().begin();
+
         return courseRepo.findById(theId);
 
     }
