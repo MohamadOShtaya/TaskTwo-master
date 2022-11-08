@@ -14,9 +14,6 @@ import java.io.IOException;
 
 
 public class UpdateCourse {
-
-
-
     @FXML
     private TextField txtCapacity;
 
@@ -28,7 +25,6 @@ public class UpdateCourse {
 
     @FXML
     private TextField txtTeacher;
-
     @FXML
     private CheckBox yes,no;
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
@@ -75,7 +71,6 @@ public class UpdateCourse {
                     tempCourse.setIsAvilable(tempCourse.isAvilable());
                 }
                 entityManager.getTransaction().commit();
-
             }
         catch (Exception ex){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -83,7 +78,5 @@ public class UpdateCourse {
             alert.setContentText("Plesae enter your update in textFields");
             alert.show();
         }
-
-
     }
 }

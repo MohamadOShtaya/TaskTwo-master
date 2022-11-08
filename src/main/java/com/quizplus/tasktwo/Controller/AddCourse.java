@@ -18,11 +18,6 @@ public class AddCourse {
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     CourseRepo courseRepo = new CourseRepo(entityManager);
     CourseService courseService = new CourseService(courseRepo);
-
-
-
-
-
     @FXML
     private TextField txtCapacity;
 
@@ -60,8 +55,6 @@ public class AddCourse {
             alert.setContentText("Please enter your new course data ");
             alert.show();
         }
-
-
     }
 
 }

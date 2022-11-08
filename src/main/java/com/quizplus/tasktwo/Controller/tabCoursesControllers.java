@@ -43,9 +43,7 @@ public class tabCoursesControllers {
         for (int i=0;i<ListObserv.size();i++){
             list.getItems().add(ListObserv.get(i));
         }
-
         return listCourse;
-
     }
 
     public void deleteCourses(ActionEvent actionEvent){
@@ -53,18 +51,14 @@ public class tabCoursesControllers {
             if(list.getSelectionModel().getSelectedIndex()>=0){
                 int index = list.getSelectionModel().getSelectedIndex();
                 int courseId = courses.get(index).getCourseId();
-
                 try{
                     System.out.println(courseId);
                     courseService.deleateById(courseId);
                     list.getItems().remove(index);
-
                 }
                 catch (Exception ex){
                     System.out.println("this id has been alredy deleted");
-
                 }
-
             }
             else {
                 String str = txt.getText();
@@ -86,9 +80,7 @@ public class tabCoursesControllers {
             alert.show();
         }
 
-
     }
-
     public void ListView(ListView.EditEvent<String> stringEditEvent) {
         System.out.println(list.getSelectionModel().selectionModeProperty().toString());
     }
@@ -109,8 +101,6 @@ public class tabCoursesControllers {
             alert.setContentText("EROR");
             alert.show();
         }
-
-
     }
 
     public int Update() throws IOException {
@@ -151,13 +141,8 @@ public class tabCoursesControllers {
 //            alert.setContentText("please select courses");
 //            alert.show();
 //        }
-
     }
-
     public void clear(ActionEvent actionEvent) {
         tetxArea.clear();
     }
 }
-
-
-

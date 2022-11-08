@@ -10,7 +10,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -31,7 +30,6 @@ public class AddStudentCourse {
     List<Course>  courses = new ArrayList<>();
     ObservableList<String> ListObserv = FXCollections.observableArrayList();
     ArrayList<Student> students = new ArrayList<>();
-
 
     public void fillCourses() {
           courses= courseService.findall();

@@ -18,7 +18,6 @@ public class AddStudent {
     StudentService studentService = new StudentService(repo);
     @FXML
     private TextField txtAvg;
-
     @FXML
     private TextField txtDepartment;
 
@@ -27,7 +26,6 @@ public class AddStudent {
 
     @FXML
     private TextField txtName;
-
     @FXML
     void SaveStudent(ActionEvent event) {
         try {
@@ -44,7 +42,5 @@ public class AddStudent {
             alert.setContentText("Please enter your new student data ");
             alert.show();
         }
-
-
     }
 }

@@ -133,7 +133,6 @@ public class tabStudentsControllers {
         }
         return id;
     }
-
     public int addCourse() throws IOException {
         try {
             int index = ListView.getSelectionModel().getSelectedIndex();

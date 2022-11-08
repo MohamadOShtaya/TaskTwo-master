@@ -14,10 +14,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class UpdateStudent {
-
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
-
     CourseRepo courseRepo = new CourseRepo(entityManager);
     CourseService courseService = new CourseService(courseRepo);
     @FXML
