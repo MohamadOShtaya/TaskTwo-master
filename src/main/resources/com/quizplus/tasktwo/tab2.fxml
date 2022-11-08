@@ -13,5 +13,6 @@
       <Button layoutX="355.0" layoutY="310.0" mnemonicParsing="false" onAction="#Update" prefHeight="25.0" prefWidth="112.0" text="Update" />
       <Button layoutX="355.0" layoutY="359.0" mnemonicParsing="false" onAction="#Add" prefHeight="25.0" prefWidth="112.0" text="Add" />
       <TextField fx:id="txt" layoutX="325.0" layoutY="262.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button layoutX="732.0" layoutY="140.0" mnemonicParsing="false" onAction="#addCourse" prefHeight="25.0" prefWidth="102.0" text="Add course" />
    </children>
 </AnchorPane>

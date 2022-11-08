@@ -2,12 +2,10 @@ package com.quizplus.tasktwo.Service;
 
 import com.quizplus.tasktwo.Models.Student;
 import com.quizplus.tasktwo.Rerpositry.StudentRepo;
-
 import java.util.List;
-
-public class studentService {
+public class StudentService {
     private StudentRepo studentRepo;
-    public studentService(StudentRepo studentRepo) {
+    public StudentService(StudentRepo studentRepo) {
         this.studentRepo = studentRepo;
     }
     public List<Student> findall() {
@@ -18,7 +16,6 @@ public class studentService {
     }
     public void save(Student theStudent) {
         studentRepo.save(theStudent);
-
     }
     public void deleateById(int id){
         studentRepo.deleteById(id);

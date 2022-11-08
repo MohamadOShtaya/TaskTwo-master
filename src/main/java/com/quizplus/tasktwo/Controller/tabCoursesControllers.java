@@ -16,6 +16,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class tabCoursesControllers {
@@ -32,15 +33,18 @@ public class tabCoursesControllers {
     @FXML private ListView<String> list = new ListView<>();
     @FXML private  TextArea tetxArea = new TextArea();
 
-    public void getCourses(ActionEvent actionEvent) {
+    public List<Course> getCourses() {
          courses=  courseService.findall();
-
+         List<Course> listCourse = new ArrayList<>();
         for(int i=0;i<courses.size();i++){
             ListObserv.add(courses.get(i).getCourseName());
         }
+
         for (int i=0;i<ListObserv.size();i++){
             list.getItems().add(ListObserv.get(i));
         }
+
+        return listCourse;
 
     }
 
@@ -97,6 +101,7 @@ public class tabCoursesControllers {
             stage.setTitle("Add Course !");
             stage.setScene(scene);
             stage.show();
+
         }
         catch (Exception ex){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -131,20 +136,27 @@ public class tabCoursesControllers {
     }
 
     public void ShowCourses(ActionEvent actionEvent) {
-        try {
+//        try {
             int index = list.getSelectionModel().getSelectedIndex();
             int courseId = courses.get(index).getCourseId();
 
             String strr = courseService.findById(courseId).toString();
             System.out.println(strr);
             tetxArea.appendText(strr);
-        }
-        catch (Exception ex){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Alert Message");
-            alert.setContentText("please select courses");
-            alert.show();
-        }
+
+//        }
+//        catch (Exception ex){
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setContentText("Alert Message");
+//            alert.setContentText("please select courses");
+//            alert.show();
+//        }
+
+    }
+
+    public void clear(ActionEvent actionEvent) {
+        tetxArea.clear();
+        entityManager.close();
 
     }
 }

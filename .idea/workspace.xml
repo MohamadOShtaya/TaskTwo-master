@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05deb936-b80a-435a-a4ef-17e40ec8623f" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/AddStudentCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/quizplus/tasktwo/addStudentCourse.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/AddStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/AddStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tab1Controllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabCoursesControllers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tab2Controllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabStudentsControllers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabCoursesControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabCoursesControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabStudentsControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabStudentsControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Models/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/studentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/quizplus/tasktwo/tab1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/quizplus/tasktwo/tab1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/quizplus/tasktwo/tab2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/quizplus/tasktwo/tab2.fxml" afterDir="false" />
     </list>
@@ -193,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667888378005</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="commit">
+      <created>1667893053379</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667893053379</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,5 +220,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

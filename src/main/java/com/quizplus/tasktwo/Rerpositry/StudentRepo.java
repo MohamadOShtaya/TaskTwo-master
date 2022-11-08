@@ -1,7 +1,5 @@
 package com.quizplus.tasktwo.Rerpositry;
 
-
-
 import com.quizplus.tasktwo.Models.Student;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -44,7 +42,5 @@ public class StudentRepo {
         catch (Exception ex){
             System.out.println("student has already been Deleated ");
         }
-
     }
-
 }

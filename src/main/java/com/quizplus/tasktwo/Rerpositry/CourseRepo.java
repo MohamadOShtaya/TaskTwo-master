@@ -10,14 +10,11 @@ import java.util.List;
 
 public class CourseRepo {
     CourseService courseService ;
-
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     public EntityManager entityManager = entityManagerFactory.createEntityManager();
-
     public CourseRepo(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-
     public List<Course> finaAll() {
         entityManager.createQuery("from course").getResultList();
         return entityManager.createQuery("from course ").getResultList();
@@ -25,7 +22,6 @@ public class CourseRepo {
     public void save(Course theCourse) {
         entityManager.getTransaction().begin();
         entityManager.persist(theCourse);
-
         entityManager.getTransaction().commit();
     }
 

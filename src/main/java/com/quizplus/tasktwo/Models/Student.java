@@ -1,10 +1,7 @@
 package com.quizplus.tasktwo.Models;
 
-
-
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,18 +53,4 @@ public class Student {
         this.studentAvg = studentAvg;
         this.studentDepartmentName = studentDepartmentName;
     }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "studentId=" + studentId +
-                ", studentName='" + studentName + '\'' +
-                ", studentGender='" + studentGender + '\'' +
-                ", studentAvg=" + studentAvg +
-                ", studentDepartmentName='" + studentDepartmentName + '\'' +
-                ", courses=" + courses +
-                '}';
-    }
-
-
 }

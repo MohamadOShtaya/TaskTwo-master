@@ -8,9 +8,9 @@ import javax.persistence.Persistence;
 import java.util.List;
 
 public class CourseService {
-      EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
-      EntityManager entityManager = entityManagerFactory.createEntityManager();
-     CourseRepo courseRepo;
+    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    CourseRepo courseRepo;
 
     public CourseService(CourseRepo courseRepo) {
         this.courseRepo = courseRepo;
@@ -33,7 +33,6 @@ public class CourseService {
         courseRepo.save(course);
         return course;
     }
-
     public void deleateById(int theId) {
         courseRepo.deleteById(theId);
     }

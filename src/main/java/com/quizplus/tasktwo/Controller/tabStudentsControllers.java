@@ -4,7 +4,7 @@ package com.quizplus.tasktwo.Controller;
 import com.quizplus.tasktwo.Main;
 import com.quizplus.tasktwo.Models.Student;
 import com.quizplus.tasktwo.Rerpositry.StudentRepo;
-import com.quizplus.tasktwo.Service.studentService;
+import com.quizplus.tasktwo.Service.StudentService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,7 +28,7 @@ public class tabStudentsControllers {
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     StudentRepo studentRepo = new StudentRepo(entityManager);
-    studentService studentService = new studentService(studentRepo);
+    StudentService studentService = new StudentService(studentRepo);
 
     @FXML
     private ListView<String> ListView;
@@ -134,4 +134,16 @@ public class tabStudentsControllers {
         return id;
     }
 
+    public int addCourse() throws IOException {
+
+        int index = ListView.getSelectionModel().getSelectedIndex();
+        id = students.get(index).getStudentId();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("addStudentCourse.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+        stage.setTitle("add student course Student !");
+        stage.setScene(scene);
+        stage.show();
+        return  id;
+    }
 }

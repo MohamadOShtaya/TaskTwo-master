@@ -2,7 +2,7 @@ package com.quizplus.tasktwo.Controller;
 
 import com.quizplus.tasktwo.Models.Student;
 import com.quizplus.tasktwo.Rerpositry.StudentRepo;
-import com.quizplus.tasktwo.Service.studentService;
+import com.quizplus.tasktwo.Service.StudentService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -15,7 +15,7 @@ public class AddStudent {
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     StudentRepo repo = new StudentRepo(entityManager);
-    studentService studentService = new studentService(repo);
+    StudentService studentService = new StudentService(repo);
     @FXML
     private TextField txtAvg;
 

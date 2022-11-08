@@ -33,10 +33,6 @@ public class Course {
             inverseJoinColumns=@JoinColumn(name = "student_id")
     )
     private List<Student> students;
-
-
-
-
     public  Course(){
 
    }
@@ -71,16 +67,23 @@ public void setIsAvilable(boolean isAvilable){
 
     @Override
     public String toString() {
-        return "Course{" +
+        StringBuilder result = new StringBuilder();
+        result.append("Course{" +
                 "courseId=" + courseId +
                 ", courseName='" + courseName + '\'' +
                 ", teacherName='" + teacherName + '\'' +
                 ", courseCapacity=" + courseCapacity +
                 ", date=" + date +
                 ", isAvilable=" + isAvilable +
-                ", students=" + students +
-                '}';
-    }
 
+                '}');
+                 for(int i=0;i<students.size();i++){
+                     result.append("\nStudent name"+" = "+students.get(i).getStudentName()
+                             +", \n"+"AVG"+" = "+students.get(i).getStudentAvg()+" "+",\n"+"Gender"+students.get(i).getStudentGender()+
+                             " "+",\n"+"Department Name"+students.get(i).getStudentDepartmentName());
+                 }
+
+            return  result.toString();
+    }
 
 }

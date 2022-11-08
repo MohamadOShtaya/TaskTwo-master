@@ -74,6 +74,7 @@ public class UpdateCourse {
             }
 
             entityManager.getTransaction().commit();
+
         }
         catch (Exception ex){
             Alert alert = new Alert(Alert.AlertType.ERROR);
