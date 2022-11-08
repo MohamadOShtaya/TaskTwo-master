@@ -4,7 +4,7 @@ package com.quizplus.tasktwo.Controller;
 import javafx.fxml.FXML;
 
 public class MainController  {
-        @FXML private tab1Controllers tap1;
-        @FXML private tab2Controllers tap2;
+        @FXML private tabCoursesControllers tap1;
+        @FXML private tabStudentsControllers tap2;
 
     }

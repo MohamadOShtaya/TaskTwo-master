@@ -21,7 +21,7 @@ import javax.persistence.Persistence;
 import java.io.IOException;
 import java.util.List;
 
-public class tab2Controllers {
+public class tabStudentsControllers {
     public static int id;
     List<Student> students;
     ObservableList<String> ListObserv = FXCollections.observableArrayList();
@@ -52,7 +52,6 @@ public class tab2Controllers {
             alert.setContentText("Error open new scene ");
             alert.show();
         }
-
     }
 
     @FXML
@@ -86,6 +85,10 @@ public class tab2Controllers {
                 }
                 catch (Exception ex){
                     System.out.println("this id has been alredy deleted");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Alert Message");
+                    alert.setContentText("this id has been alredy deleted");
+                    alert.show();
                 }
             }
 
@@ -96,8 +99,6 @@ public class tab2Controllers {
             alert.setContentText("please select student or enter student ID");
             alert.show();
         }
-
-
     }
 
     @FXML
@@ -130,7 +131,6 @@ public class tab2Controllers {
             alert.setContentText("please select student");
             alert.show();
         }
-
         return id;
     }
 

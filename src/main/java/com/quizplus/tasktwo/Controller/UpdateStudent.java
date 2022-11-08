@@ -14,6 +14,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class UpdateStudent {
+
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
 
@@ -41,8 +42,8 @@ public class UpdateStudent {
             String Gender = txtGender.getText();
             double GPA = Double.parseDouble(txtGPA.getText());
             String department = txtDep.getText();
-            tab2Controllers tab1Controllers = new tab2Controllers();
-            int id = tab2Controllers.id;
+            tabStudentsControllers tab1Controllers = new tabStudentsControllers();
+            int id = tabStudentsControllers.id;
             Student tempStudent = entityManager.find(Student.class,id);
             entityManager.getTransaction().begin();
             if(txtName!=null){
@@ -71,13 +72,12 @@ public class UpdateStudent {
             else {
                 tempStudent.setStudentDepartmentName(tempStudent.getStudentDepartmentName());
             }
-
             entityManager.getTransaction().commit();
         }
         catch (Exception ex){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Alert Message");
-            alert.setContentText("Please update Or closse ");
+            alert.setContentText("please enter your update student info in text fields");
             alert.show();
         }
 

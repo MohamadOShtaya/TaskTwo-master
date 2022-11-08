@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="866.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizplus.tasktwo.Controller.tab1Controllers">
+<AnchorPane prefHeight="866.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizplus.tasktwo.Controller.tabCoursesControllers">
    <children>
       <Button fx:id="Get" layoutX="167.0" layoutY="99.0" mnemonicParsing="false" onAction="#getCourses" prefHeight="25.0" prefWidth="145.0" text="GET courses" />
       <ListView fx:id="list" layoutX="393.0" layoutY="18.0" onEditStart="#ListView" prefHeight="200.0" prefWidth="392.0" />

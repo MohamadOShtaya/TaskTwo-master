@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="964.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizplus.tasktwo.Controller.tab2Controllers">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="964.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizplus.tasktwo.Controller.tabStudentsControllers">
    <children>
       <ListView fx:id="ListView" layoutX="325.0" layoutY="28.0" prefHeight="200.0" prefWidth="200.0" />
       <Button layoutX="150.0" layoutY="115.0" mnemonicParsing="false" onAction="#Get" prefHeight="25.0" prefWidth="112.0" text="GET" />

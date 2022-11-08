@@ -19,7 +19,9 @@ public class CourseService {
         return courseRepo.finaAll();
     }
     public Course findById(int theId) {
+        entityManager.getTransaction().begin();
         return courseRepo.findById(theId);
+
     }
     public void save(Course course){
         course.setCourseId(0);

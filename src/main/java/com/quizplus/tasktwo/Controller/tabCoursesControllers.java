@@ -18,7 +18,7 @@ import javax.persistence.Persistence;
 import java.io.IOException;
 import java.util.List;
 
-public class tab1Controllers  {
+public class tabCoursesControllers {
     public static int id;
     List<Course> courses;
     ObservableList<String> ListObserv = FXCollections.observableArrayList();
