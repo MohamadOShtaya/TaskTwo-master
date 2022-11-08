@@ -6,6 +6,7 @@ import com.quizplus.tasktwo.Service.CourseService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -20,8 +21,7 @@ public class AddCourse {
 
 
 
-    @FXML
-    private TextField txtAvilable;
+
 
     @FXML
     private TextField txtCapacity;
@@ -34,6 +34,8 @@ public class AddCourse {
 
     @FXML
     private TextField txtTeacher;
+    @FXML
+    private CheckBox yes,no;
 
     @FXML
     void save(ActionEvent event) throws ParseException {
@@ -41,7 +43,14 @@ public class AddCourse {
             String courseName = txtName.getText();
             String courseTeacher = txtTeacher.getText();
             int capacity = Integer.parseInt(txtCapacity.getText());
-            boolean IsAva = Boolean.parseBoolean(txtAvilable.getText());
+            boolean IsAva;
+            if(yes.isSelected()){
+                 IsAva = true;
+            }
+            else {
+                 IsAva = false;
+            }
+
             Course course = new Course(courseName,courseTeacher,capacity,null,IsAva);
             courseService.save(course);
         }

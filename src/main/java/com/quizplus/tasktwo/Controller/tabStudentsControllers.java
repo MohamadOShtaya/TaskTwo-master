@@ -135,15 +135,24 @@ public class tabStudentsControllers {
     }
 
     public int addCourse() throws IOException {
+        try {
+            int index = ListView.getSelectionModel().getSelectedIndex();
+            id = students.get(index).getStudentId();
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("addStudentCourse.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+            stage.setTitle("add student course Student !");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("please select student");
+            alert.show();
+        }
 
-        int index = ListView.getSelectionModel().getSelectedIndex();
-        id = students.get(index).getStudentId();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("addStudentCourse.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-        stage.setTitle("add student course Student !");
-        stage.setScene(scene);
-        stage.show();
+
         return  id;
     }
 }
