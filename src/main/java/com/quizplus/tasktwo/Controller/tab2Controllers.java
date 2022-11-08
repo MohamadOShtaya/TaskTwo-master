@@ -38,12 +38,21 @@ public class tab2Controllers {
 
     @FXML
     void Add(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("addStudent.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-        stage.setTitle("Add Course !");
-        stage.setScene(scene);
-        stage.show();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("addStudent.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+            stage.setTitle("Add Course !");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("Error open new scene ");
+            alert.show();
+        }
+
     }
 
     @FXML
@@ -60,6 +69,10 @@ public class tab2Controllers {
                 }
                 catch (Exception ex){
                     System.out.println("this id has been alredy deleted");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Alert Message");
+                    alert.setContentText("please select student or enter student ID");
+                    alert.show();
 
                 }
 

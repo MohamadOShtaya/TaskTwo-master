@@ -5,6 +5,7 @@ import com.quizplus.tasktwo.Rerpositry.StudentRepo;
 import com.quizplus.tasktwo.Service.studentService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -29,12 +30,21 @@ public class AddStudent {
 
     @FXML
     void SaveStudent(ActionEvent event) {
-       String sName = txtName.getText();
-       String gender = txtGender.getText();
-       String dep = txtDepartment.getText();
-       double avg = Double.parseDouble(txtAvg.getText());
-       Student student = new Student(sName,gender,avg,dep);
-        studentService.save(student);
+        try {
+            String sName = txtName.getText();
+            String gender = txtGender.getText();
+            String dep = txtDepartment.getText();
+            double avg = Double.parseDouble(txtAvg.getText());
+            Student student = new Student(sName,gender,avg,dep);
+            studentService.save(student);
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("Please enter your new student data ");
+            alert.show();
+        }
+
 
     }
 }

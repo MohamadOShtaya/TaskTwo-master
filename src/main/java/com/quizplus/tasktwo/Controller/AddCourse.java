@@ -5,6 +5,7 @@ import com.quizplus.tasktwo.Rerpositry.CourseRepo;
 import com.quizplus.tasktwo.Service.CourseService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -36,12 +37,21 @@ public class AddCourse {
 
     @FXML
     void save(ActionEvent event) throws ParseException {
-        String courseName = txtName.getText();
-        String courseTeacher = txtTeacher.getText();
-        int capacity = Integer.parseInt(txtCapacity.getText());
-        boolean IsAva = Boolean.parseBoolean(txtAvilable.getText());
-        Course course = new Course(courseName,courseTeacher,capacity,null,IsAva);
-        courseService.save(course);
+        try {
+            String courseName = txtName.getText();
+            String courseTeacher = txtTeacher.getText();
+            int capacity = Integer.parseInt(txtCapacity.getText());
+            boolean IsAva = Boolean.parseBoolean(txtAvilable.getText());
+            Course course = new Course(courseName,courseTeacher,capacity,null,IsAva);
+            courseService.save(course);
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("Please enter your new course data ");
+            alert.show();
+        }
+
 
     }
 

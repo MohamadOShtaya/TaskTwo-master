@@ -5,6 +5,7 @@ import com.quizplus.tasktwo.Rerpositry.CourseRepo;
 import com.quizplus.tasktwo.Service.CourseService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -35,20 +36,51 @@ public class UpdateStudent {
 
     @FXML
     void Update(ActionEvent event) {
+        try {
+            String studentName = txtName.getText();
+            String Gender = txtGender.getText();
+            double GPA = Double.parseDouble(txtGPA.getText());
+            String department = txtDep.getText();
+            tab2Controllers tab1Controllers = new tab2Controllers();
+            int id = tab2Controllers.id;
+            Student tempStudent = entityManager.find(Student.class,id);
+            entityManager.getTransaction().begin();
+            if(txtName!=null){
+                tempStudent.setStudentName(studentName);
+            }
+            else {
+                tempStudent.setStudentName(tempStudent.getStudentName());
+            }
+            if(txtGender!=null){
+                tempStudent.setStudentGender(Gender);
+            }
+            else {
+                tempStudent.setStudentGender(tempStudent.getStudentGender());
+            }
+            if(txtGPA!=null){
+                tempStudent.setStudentAvg(GPA);
 
-        String studentName = txtName.getText();
-        String Gender = txtGender.getText();
-        double GPA = Double.parseDouble(txtGPA.getText());
-        String department = txtDep.getText();
-        tab2Controllers tab1Controllers = new tab2Controllers();
-        int id = tab2Controllers.id;
-        Student tempStudent = entityManager.find(Student.class,id);
-        entityManager.getTransaction().begin();
-        tempStudent.setStudentName(studentName);
-        tempStudent.setStudentAvg(GPA);
-        tempStudent.setStudentDepartmentName(department);
-        tempStudent.setStudentGender(Gender);
-        entityManager.getTransaction().commit();
+            }
+            else {
+                tempStudent.setStudentAvg(tempStudent.getStudentAvg());
+
+            }
+            if(txtDep!=null){
+                tempStudent.setStudentDepartmentName(department);
+            }
+            else {
+                tempStudent.setStudentDepartmentName(tempStudent.getStudentDepartmentName());
+            }
+
+            entityManager.getTransaction().commit();
+        }
+        catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Alert Message");
+            alert.setContentText("Please update Or closse ");
+            alert.show();
+        }
+
     }
 
 }
