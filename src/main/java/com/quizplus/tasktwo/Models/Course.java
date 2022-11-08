@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 import lombok.*;
 
-
 @Getter
 @Setter
 @Entity(name = "course")
@@ -82,7 +81,6 @@ public void setIsAvilable(boolean isAvilable){
                              +", \n"+"AVG"+" = "+students.get(i).getStudentAvg()+" "+",\n"+"Gender"+students.get(i).getStudentGender()+
                              " "+",\n"+"Department Name"+students.get(i).getStudentDepartmentName());
                  }
-
             return  result.toString();
     }
 

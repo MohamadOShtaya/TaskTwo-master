@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="05deb936-b80a-435a-a4ef-17e40ec8623f" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabCoursesControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tabCoursesControllers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Rerpositry/CourseRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Rerpositry/CourseRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Models/Course.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667912102233</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="commit">
+      <created>1667913493467</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667913493467</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commit">
+      <created>1667913728448</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667913728448</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
