@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="05deb936-b80a-435a-a4ef-17e40ec8623f" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/AddCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/AddCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/AddStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/AddStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/UpdateStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tab1Controllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Controller/tab1Controllers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Rerpositry/CourseRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Rerpositry/CourseRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/courseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/courseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/courseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizplus/tasktwo/Service/CourseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,18 +51,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_directory_selection": "C:/Users/Mohamad O Shtaya/Desktop/Intilja-sceneBuilder/TaskTwo-master/src/main/java/com/quizplus/tasktwo",
-    "last_opened_file_path": "C:/Users/Mohamad O Shtaya/Desktop/TaskTwo/TaskTwo/TaskTwo",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Mohamad O Shtaya/Desktop/Intilja-sceneBuilder/TaskTwo-master/src/main/java/com/quizplus/tasktwo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mohamad O Shtaya/Desktop/TaskTwo/TaskTwo/TaskTwo&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.quizplus.tasktwo.Rerpositry" />
@@ -168,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667844888940</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit">
+      <created>1667860588023</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667860588023</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

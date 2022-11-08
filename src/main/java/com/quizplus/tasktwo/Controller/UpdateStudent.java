@@ -1,9 +1,8 @@
 package com.quizplus.tasktwo.Controller;
 
-import com.quizplus.tasktwo.Models.Course;
 import com.quizplus.tasktwo.Models.Student;
 import com.quizplus.tasktwo.Rerpositry.CourseRepo;
-import com.quizplus.tasktwo.Service.courseService;
+import com.quizplus.tasktwo.Service.CourseService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -18,7 +17,7 @@ public class UpdateStudent {
     EntityManager entityManager = entityManagerFactory.createEntityManager();
 
     CourseRepo courseRepo = new CourseRepo(entityManager);
-    com.quizplus.tasktwo.Service.courseService courseService = new courseService(courseRepo);
+    CourseService courseService = new CourseService(courseRepo);
     @FXML
     private Label txt;
 
@@ -36,6 +35,7 @@ public class UpdateStudent {
 
     @FXML
     void Update(ActionEvent event) {
+
         String studentName = txtName.getText();
         String Gender = txtGender.getText();
         double GPA = Double.parseDouble(txtGPA.getText());

@@ -3,7 +3,7 @@ package com.quizplus.tasktwo.Controller;
 import com.quizplus.tasktwo.Main;
 import com.quizplus.tasktwo.Models.Course;
 import com.quizplus.tasktwo.Rerpositry.CourseRepo;
-import com.quizplus.tasktwo.Service.courseService;
+import com.quizplus.tasktwo.Service.CourseService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -26,7 +26,7 @@ public class tab1Controllers  {
     EntityManager entityManager = entityManagerFactory.createEntityManager();
 
     CourseRepo courseRepo = new CourseRepo(entityManager);
-    courseService courseService = new courseService(courseRepo);
+    CourseService courseService = new CourseService(courseRepo);
     @FXML  Button Get;
     @FXML private TextField txt = new TextField();
     @FXML private ListView<String> list = new ListView<>();

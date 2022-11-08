@@ -2,27 +2,22 @@ package com.quizplus.tasktwo.Controller;
 
 import com.quizplus.tasktwo.Models.Course;
 import com.quizplus.tasktwo.Rerpositry.CourseRepo;
-import com.quizplus.tasktwo.Service.courseService;
+import com.quizplus.tasktwo.Service.CourseService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class AddCourse {
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     CourseRepo courseRepo = new CourseRepo(entityManager);
-    com.quizplus.tasktwo.Service.courseService courseService = new courseService(courseRepo);
+    CourseService courseService = new CourseService(courseRepo);
 
-    @FXML
-    private Button btn;
+
 
     @FXML
     private TextField txtAvilable;

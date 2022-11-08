@@ -2,16 +2,17 @@ package com.quizplus.tasktwo.Service;
 
 import com.quizplus.tasktwo.Models.Course;
 import com.quizplus.tasktwo.Rerpositry.CourseRepo;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
 
-public class courseService {
-
+public class CourseService {
+      EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
+      EntityManager entityManager = entityManagerFactory.createEntityManager();
      CourseRepo courseRepo;
-    public courseService(CourseRepo courseRepo) {
+
+    public CourseService(CourseRepo courseRepo) {
         this.courseRepo = courseRepo;
     }
     public List<Course> findall() {

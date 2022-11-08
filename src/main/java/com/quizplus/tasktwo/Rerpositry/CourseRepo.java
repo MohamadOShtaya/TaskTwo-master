@@ -1,7 +1,7 @@
 package com.quizplus.tasktwo.Rerpositry;
 
 import com.quizplus.tasktwo.Models.Course;
-import com.quizplus.tasktwo.Service.courseService;
+import com.quizplus.tasktwo.Service.CourseService;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -9,13 +9,15 @@ import javax.persistence.Persistence;
 import java.util.List;
 
 public class CourseRepo {
-    courseService courseService;
+    CourseService courseService ;
+
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
     public EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-    public CourseRepo(EntityManager theEntityManager){
-        entityManager=theEntityManager;
+    public CourseRepo(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
+
     public List<Course> finaAll() {
         entityManager.createQuery("from course").getResultList();
         return entityManager.createQuery("from course ").getResultList();
